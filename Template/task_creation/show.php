@@ -47,6 +47,8 @@
                 <?= $this->form->checkbox('duplicate_multiple_projects', t('Duplicate to multiple projects'), 1) ?>
             <?php endif ?>
 
+            <?= $this->form->checkbox('is_checklist', t('Is Checklist Task'), 1, isset($values['is_checklist']) && $values['is_checklist'] == 1) ?>
+
             <?= $this->modal->submitButtons() ?>
         </div>
     </div>

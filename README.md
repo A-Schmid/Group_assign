@@ -1,7 +1,9 @@
-## Checkout our latest project
-[![](https://raw.githubusercontent.com/docpht/docpht/master/public/assets/img/logo.png)](https://github.com/docpht/docpht)
+## Checklist Tasks Mod
 
-- With [DocPHT](https://github.com/docpht/docpht) you can take notes and quickly document anything and without the use of any database.
+This modification of the *Group_assign* plugin allows for creating *Checklist Tasks*.
+By assigning a task to a group and checking the 'is checklist task' box, a subtask for each member of the assigned group is created automatically.
+This way, tasks that everybody has to do can be implemented easily.
+
 -----------
 [![Latest release](https://img.shields.io/github/release/creecros/Group_assign.svg)](https://github.com/creecros/Group_assign/releases)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/creecros/Group_assign/blob/master/LICENSE)

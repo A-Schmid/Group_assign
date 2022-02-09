@@ -4,6 +4,7 @@ namespace Kanboard\Plugin\Group_assign\Controller;
 
 use Kanboard\Plugin\Group_assign\Model\MultiselectModel;
 use Kanboard\Plugin\Group_assign\Model\MultiselectMemberModel;
+use Kanboard\Plugin\Group_assign\Model\ChecklistTaskCreationModel;
 use Kanboard\Model\SwimlaneModel;
 use Kanboard\Model\ColumnModel;
 use Kanboard\Model\ProjectUserRoleModel;

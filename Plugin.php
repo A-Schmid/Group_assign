@@ -25,6 +25,7 @@ use Kanboard\Plugin\Group_assign\Model\TaskProjectMoveModel;
 use Kanboard\Plugin\Group_assign\Model\TaskRecurrenceModel;
 use Kanboard\Plugin\Group_assign\Model\NewMetaMagikSubquery;
 use Kanboard\Plugin\Group_assign\Model\OldMetaMagikSubquery;
+use Kanboard\Plugin\Group_assign\Model\ChecklistTaskCreationModel;
 use PicoDb\Table;
 use PicoDb\Database;
 use Kanboard\Core\Security\Role;
@@ -40,6 +41,12 @@ class Plugin extends Base
         $this->container['userNotificationFilterModel'] = $this->container->factory(function ($c) {
                 return new NewUserNotificationFilterModel($c);
         });
+
+        //Checklist Task
+        $this->container['taskCreationModel'] = $this->container->factory(function ($c) {
+            return new ChecklistTaskCreationModel($c);
+        });
+
 
         //Helpers
         $this->helper->register('newTaskHelper', '\Kanboard\Plugin\Group_assign\Helper\NewTaskHelper');
@@ -175,7 +182,7 @@ class Plugin extends Base
     {
         return [
             'Plugin\Group_assign\Model' => [
-                'MultiselectMemberModel', 'MultiselectModel', 'GroupColorExtension', 'TaskProjectDuplicationModel', 'TaskProjectMoveModel', 'TaskRecurrenceModel',
+                'MultiselectMemberModel', 'MultiselectModel', 'GroupColorExtension', 'TaskProjectDuplicationModel', 'TaskProjectMoveModel', 'TaskRecurrenceModel', 'ChecklistTaskCreationModel',
             ],
         ];
     }
